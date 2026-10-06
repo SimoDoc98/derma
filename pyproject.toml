@@ -22,6 +22,10 @@ classifiers = [
     "Topic :: Scientific/Engineering :: Medical Science Apps.",
 ]
 
+[project.urls]
+Repository = "https://github.com/SimoDoc98/derma"
+Issues = "https://github.com/SimoDoc98/derma/issues"
+
 [project.optional-dependencies]
 # cvxEDA (GPL-3.0) is optional: DERMA itself is MIT and does not redistribute it.
 cvxeda = ["cvxeda>=1.1"]
