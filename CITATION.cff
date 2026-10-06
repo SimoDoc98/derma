@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "If you use DERMA in your research, please cite it as below."
+type: software
+title: "DERMA: synthetic electrodermal activity calibrated on real data"
+authors:
+  - family-names: Costantini
+    given-names: Simone
+    orcid: "https://orcid.org/0009-0001-5104-6733"
+version: 0.1.0
+license: MIT
+repository-code: "https://github.com/SimoDoc98/derma"
+keywords:
+  - electrodermal activity
+  - skin conductance
+  - synthetic data
+  - cvxEDA

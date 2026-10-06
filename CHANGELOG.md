@@ -2,7 +2,10 @@
 
 All notable changes to DERMA are documented in this file.
 
-## [Unreleased]
+## [0.1.0] - 2026-10-06
+
+First release: core of the generator and of the estimation pipeline, ported from the
+original implementation of the author's PhD work.
 
 ### Added
 - Project skeleton: package layout, MIT license, contribution guidelines on dataset
@@ -13,9 +16,12 @@ All notable changes to DERMA are documented in this file.
 - `derma.generation`: SCR kernel calibration (Bach 2010 shape fitted by a third-order ODE,
   Bach 2011) and the synthetic EDA generator, ported from the original implementation
   with identical outputs for the same seed.
-
-### Changed (with respect to the original implementation)
-- Random numbers come from an explicit `numpy.random.RandomState` per subject instead of
-  the global NumPy state; the sequence of draws, and therefore the output, is unchanged.
-- The default `scr_beta_var` of `EDAProfile` is 0.2 instead of 0.1, matching the value
-  used by every reference profile. Shipped profiles are not affected.
+- `derma.estimation`: per-segment parameter extraction, maximum-likelihood fit with AIC
+  selection, segmentation recipes of the reference profiles with the new
+  `onset_exclusion_sec` option (40 s for MAUS). Re-estimating the reference profiles from
+  the original preprocessed recordings reproduces them exactly.
+- `derma.decomposition`: `decompose()` wrapper around the optional `cvxeda` package,
+  with 0.75 s moving-average smoothing.
+- `derma.report`: goodness-of-fit table (CSV and Markdown), histograms with fitted
+  densities and SCR kernel check (PNG, optional matplotlib).
+- `CITATION.cff`.

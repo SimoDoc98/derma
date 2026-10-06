@@ -16,9 +16,10 @@ of DERMA. It is updated whenever a new kind of use appears and before each relea
 - **Project scaffolding**: repository structure, packaging configuration, initial tests
   and CI workflow.
 - **Porting and refactoring of the author's original code**: port of the generator, the
-  SCR kernel calibration and the profile data structures from the original PhD code,
-  conversion of the reference profiles to JSON, and equivalence tests showing that the
-  ported code reproduces the original outputs.
+  SCR kernel calibration, the profile data structures, the parameter estimation and the
+  goodness-of-fit report from the original PhD code, conversion of the reference
+  profiles to JSON, and equivalence tests showing that the ported code reproduces the
+  original outputs.
 - **Documentation**: first drafts of `README.md`, `CONTRIBUTING.md` and `CHANGELOG.md`.
 
 ## Human review
