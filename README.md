@@ -1,10 +1,11 @@
 <p align="center">
-  <img src="assets/derma-logo.png" alt="DERMA logo" width="240">
+  <img src="assets/derma-logo.png" alt="DERMA logo" width="360">
 </p>
 
 # DERMA
 
-Synthetic electrodermal activity (EDA) calibrated on real recordings.
+**D**ata-driven **E**lectrodermal **R**esponse **M**odeling **A**rchitecture: synthetic
+electrodermal activity (EDA) calibrated on real recordings.
 
 DERMA estimates interpretable tonic and phasic parameters from real EDA recordings,
 summarizes them as population profiles (maximum-likelihood fits with AIC model
