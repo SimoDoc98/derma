@@ -1,0 +1,44 @@
+# --- Personal files and local Claude Code configuration ---
+CLAUDE.local.md
+CLAUDE.md
+.claude/settings.local.json
+
+# --- Data: never in the repository ---
+# Datasets live in the user's data folder (DERMA_DATA_DIR), outside the repository.
+# These patterns are a safety net against accidental commits.
+*.mat
+*.npz
+*.npy
+*.h5
+*.hdf5
+*.pkl
+*.edf
+*.zip
+*.tar.gz
+/data/
+/datasets/
+/raw/
+local_config.*
+.env
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.venv/
+venv/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# --- Generated documentation ---
+docs/_build/
+site/
+
+# --- Operating system and editors ---
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

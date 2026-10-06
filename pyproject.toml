@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "derma"
+dynamic = ["version"]
+description = "Synthetic electrodermal activity signal calibrated on real data"
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "Simone Costantini" }]
+requires-python = ">=3.10"
+dependencies = [
+    "numpy",
+    "scipy",
+]
+keywords = ["electrodermal activity", "EDA", "skin conductance", "synthetic data", "cvxEDA"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering :: Medical Science Apps.",
+]
+
+[project.optional-dependencies]
+# cvxEDA (GPL-3.0) is optional: DERMA itself is MIT and does not redistribute it.
+cvxeda = ["cvxeda>=1.1"]
+report = ["matplotlib"]
+test = ["pytest"]
+
+[tool.setuptools.dynamic]
+version = { attr = "derma.__version__" }
+
+[tool.setuptools.packages.find]
+include = ["derma*"]
