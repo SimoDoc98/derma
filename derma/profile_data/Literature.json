@@ -1,0 +1,107 @@
+{
+  "parameters": {
+    "scl_drift": {
+      "distribution": "uniform",
+      "params": [
+        -0.01,
+        0.02
+      ],
+      "bounds": [
+        -0.01,
+        0.01
+      ]
+    },
+    "nsscr": {
+      "distribution": "uniform",
+      "params": [
+        1.0,
+        24.0
+      ],
+      "bounds": [
+        1.0,
+        25.0
+      ]
+    },
+    "scr_amp_sd": {
+      "distribution": "uniform",
+      "params": [
+        0.1,
+        0.4
+      ],
+      "bounds": [
+        0.1,
+        0.5
+      ]
+    },
+    "scr_rise_time": {
+      "distribution": "uniform",
+      "params": [
+        0.5,
+        2.0
+      ],
+      "bounds": [
+        0.5,
+        2.5
+      ]
+    },
+    "scr_tau1": {
+      "distribution": "uniform",
+      "params": [
+        0.5,
+        1.5
+      ],
+      "bounds": [
+        0.5,
+        2.0
+      ]
+    },
+    "scr_tau_ratio": {
+      "distribution": "uniform",
+      "params": [
+        2.0,
+        8.0
+      ],
+      "bounds": [
+        2.0,
+        10.0
+      ]
+    },
+    "scr_scl_ratio": {
+      "distribution": "uniform",
+      "params": [
+        0.1,
+        0.9
+      ],
+      "bounds": [
+        0.1,
+        1.0
+      ]
+    }
+  },
+  "scr_beta_var": 0.2,
+  "scl_period_range": [
+    120.0,
+    600.0
+  ],
+  "provenance": {
+    "name": "Literature",
+    "description": "Uniform distributions over parameter ranges reported in the literature.",
+    "origin": "Frozen reference profile estimated in the author's PhD work and ported to DERMA.",
+    "units": {
+      "scl_drift": "uS/s",
+      "nsscr": "events/min",
+      "scr_amp_sd": "dimensionless",
+      "scr_rise_time": "s",
+      "scr_tau1": "s",
+      "scr_tau_ratio": "dimensionless",
+      "scr_scl_ratio": "dimensionless",
+      "scl_period_range": "s"
+    },
+    "references": [
+      "Bach DR et al. (2010) Int J Psychophysiol 75(3):349-356",
+      "Braithwaite JJ et al. (2013) A guide for analysing electrodermal activity (EDA) & skin conductance responses (SCRs) for psychological experiments",
+      "Leiner D, Fahr A, Frueh H (2012) Communication Methods and Measures 6(4):237-250",
+      "Greco A et al. (2016) IEEE Trans Biomed Eng 63(4):797-804"
+    ]
+  }
+}

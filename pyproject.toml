@@ -33,3 +33,6 @@ version = { attr = "derma.__version__" }
 
 [tool.setuptools.packages.find]
 include = ["derma*"]
+
+[tool.setuptools.package-data]
+derma = ["profile_data/*.json"]

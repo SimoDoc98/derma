@@ -1,0 +1,128 @@
+{
+  "parameters": {
+    "scl_drift": {
+      "distribution": "laplace",
+      "params": [
+        -0.00029171753281051515,
+        0.0015333945246329551
+      ],
+      "bounds": [
+        -0.00579470379951054,
+        0.009898445567885815
+      ]
+    },
+    "nsscr": {
+      "distribution": "expon",
+      "params": [
+        0.0,
+        1.486375296450448
+      ],
+      "bounds": [
+        0.0,
+        9.182608695652174
+      ]
+    },
+    "scr_amp_sd": {
+      "distribution": "norm",
+      "params": [
+        0.7179968720035893,
+        0.34286031841618914
+      ],
+      "bounds": [
+        0.10438691824674606,
+        1.8782343864440918
+      ]
+    },
+    "scr_rise_time": {
+      "distribution": "gamma",
+      "params": [
+        7.749728448079791,
+        0.0,
+        0.4694852288319654
+      ],
+      "bounds": [
+        1.25,
+        7.75
+      ]
+    },
+    "scr_tau1": {
+      "distribution": "gamma",
+      "params": [
+        5.448972882147729,
+        0.0,
+        0.4023494349603379
+      ],
+      "bounds": [
+        0.25,
+        5.125
+      ]
+    },
+    "scr_tau_ratio": {
+      "distribution": "lognorm",
+      "params": [
+        0.2039428393833935,
+        0.0,
+        1.666404533284625
+      ],
+      "bounds": [
+        1.0,
+        3.666269841269841
+      ]
+    },
+    "scr_scl_ratio": {
+      "distribution": "lognorm",
+      "params": [
+        0.5434016406139878,
+        0.0,
+        0.011160656488078837
+      ],
+      "bounds": [
+        0.004381699021905661,
+        0.05289045348763466
+      ]
+    }
+  },
+  "scr_beta_var": 0.2,
+  "scl_period_range": [
+    120.0,
+    600.0
+  ],
+  "provenance": {
+    "name": "CASE_HighArousal",
+    "description": "CASE dataset, high-arousal video conditions (amusement, fear).",
+    "origin": "Frozen reference profile estimated in the author's PhD work and ported to DERMA.",
+    "units": {
+      "scl_drift": "uS/s",
+      "nsscr": "events/min",
+      "scr_amp_sd": "dimensionless",
+      "scr_rise_time": "s",
+      "scr_tau1": "s",
+      "scr_tau_ratio": "dimensionless",
+      "scr_scl_ratio": "dimensionless",
+      "scl_period_range": "s"
+    },
+    "dataset": "CASE",
+    "citation": "Sharma K, Castellini C, van den Broek EL, Albu-Schaeffer A, Schwenker F. A dataset of continuous affect annotations and physiological signals for emotion analysis. Scientific Data 6, 196 (2019). doi:10.1038/s41597-019-0209-0",
+    "recipe": {
+      "conditions": [
+        "amusement-1",
+        "amusement-2",
+        "fear-1",
+        "fear-2"
+      ],
+      "min_segment_sec": 60,
+      "max_segment_sec": 300,
+      "onset_exclusion_sec": 0,
+      "artifact_mask": "manual annotation (0.14% of samples in the target segments)"
+    },
+    "estimation": {
+      "date": "2026-04-09",
+      "sampling_frequency_hz": 4,
+      "decomposition": "cvxEDA (Greco et al., 2016), tau0 = 2.0 s, tau1 = 0.7 s",
+      "cvxeda_hyperparameters": "alpha, gamma and delta_knot were tuned manually for each recording by expert visual inspection, independently of S.O.M.A.; the per-recording values were not preserved.",
+      "segmentation": "contiguous blocks of the target conditions, segments shorter than 60 s discarded, longer segments split into chunks of at most 300 s",
+      "statistical_unit": "segment (several segments per subject)",
+      "distribution_selection": "maximum likelihood fit, family with minimum AIC"
+    }
+  }
+}

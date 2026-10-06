@@ -1,0 +1,126 @@
+{
+  "parameters": {
+    "scl_drift": {
+      "distribution": "t",
+      "params": [
+        1.089469235887178,
+        -0.000581182379829325,
+        0.0043358784452042515
+      ],
+      "bounds": [
+        -0.19238595923005167,
+        0.33266950257408034
+      ]
+    },
+    "nsscr": {
+      "distribution": "halfnorm",
+      "params": [
+        0.0,
+        5.66992680100806
+      ],
+      "bounds": [
+        0.0,
+        13.2
+      ]
+    },
+    "scr_amp_sd": {
+      "distribution": "gamma",
+      "params": [
+        10.878679435149035,
+        0.0,
+        0.10210993885993958
+      ],
+      "bounds": [
+        0.09127543866634369,
+        3.880544424057007
+      ]
+    },
+    "scr_rise_time": {
+      "distribution": "lognorm",
+      "params": [
+        0.2695504025242032,
+        0.0,
+        2.5893159282539315
+      ],
+      "bounds": [
+        0.5,
+        9.0
+      ]
+    },
+    "scr_tau1": {
+      "distribution": "gamma",
+      "params": [
+        14.692016272183556,
+        0.0,
+        0.11394016718070692
+      ],
+      "bounds": [
+        0.25,
+        3.75
+      ]
+    },
+    "scr_tau_ratio": {
+      "distribution": "lognorm",
+      "params": [
+        0.1483728067490914,
+        0.0,
+        1.7656240854108
+      ],
+      "bounds": [
+        1.0,
+        4.440476190476191
+      ]
+    },
+    "scr_scl_ratio": {
+      "distribution": "johnsonsb",
+      "params": [
+        0.645954256430231,
+        0.8305591151724656,
+        0.0,
+        0.22878259865218992
+      ],
+      "bounds": [
+        0.003120789770036936,
+        0.21740518510341644
+      ]
+    }
+  },
+  "scr_beta_var": 0.2,
+  "scl_period_range": [
+    120.0,
+    600.0
+  ],
+  "provenance": {
+    "name": "SAD",
+    "description": "Stress in real-world driving (drivedb), whole recordings.",
+    "origin": "Frozen reference profile estimated in the author's PhD work and ported to DERMA.",
+    "units": {
+      "scl_drift": "uS/s",
+      "nsscr": "events/min",
+      "scr_amp_sd": "dimensionless",
+      "scr_rise_time": "s",
+      "scr_tau1": "s",
+      "scr_tau_ratio": "dimensionless",
+      "scr_scl_ratio": "dimensionless",
+      "scl_period_range": "s"
+    },
+    "dataset": "SAD",
+    "citation": "Healey JA, Picard RW. Detecting stress during real-world driving tasks using physiological sensors. IEEE Transactions on Intelligent Transportation Systems 6(2), 156-166 (2005). doi:10.1109/TITS.2005.848368. Distributed by PhysioNet (drivedb): Goldberger AL et al., Circulation 101(23), e215-e220 (2000).",
+    "recipe": {
+      "conditions": "all samples",
+      "min_segment_sec": 60,
+      "max_segment_sec": 300,
+      "onset_exclusion_sec": 0,
+      "artifact_mask": "none"
+    },
+    "estimation": {
+      "date": "2026-04-09",
+      "sampling_frequency_hz": 4,
+      "decomposition": "cvxEDA (Greco et al., 2016), tau0 = 2.0 s, tau1 = 0.7 s",
+      "cvxeda_hyperparameters": "alpha, gamma and delta_knot were tuned manually for each recording by expert visual inspection, independently of S.O.M.A.; the per-recording values were not preserved.",
+      "segmentation": "contiguous blocks of the target conditions, segments shorter than 60 s discarded, longer segments split into chunks of at most 300 s",
+      "statistical_unit": "segment (several segments per subject)",
+      "distribution_selection": "maximum likelihood fit, family with minimum AIC"
+    }
+  }
+}

@@ -1,0 +1,126 @@
+{
+  "parameters": {
+    "scl_drift": {
+      "distribution": "t",
+      "params": [
+        2.3021025572208895,
+        -0.0008444273178383304,
+        0.0013651557458352588
+      ],
+      "bounds": [
+        -0.010244082474572374,
+        0.0021469051190861027
+      ]
+    },
+    "nsscr": {
+      "distribution": "expon",
+      "params": [
+        0.0,
+        2.616770802505385
+      ],
+      "bounds": [
+        0.0,
+        9.30232558139535
+      ]
+    },
+    "scr_amp_sd": {
+      "distribution": "gamma",
+      "params": [
+        3.958189926748989,
+        0.0,
+        0.23289831423432736
+      ],
+      "bounds": [
+        0.09455768764019012,
+        2.850858688354492
+      ]
+    },
+    "scr_rise_time": {
+      "distribution": "lognorm",
+      "params": [
+        0.33847432038496816,
+        0.0,
+        3.230081600497641
+      ],
+      "bounds": [
+        1.9464285714285714,
+        7.0
+      ]
+    },
+    "scr_tau1": {
+      "distribution": "norm",
+      "params": [
+        1.6961053139169784,
+        0.45274189956910493
+      ],
+      "bounds": [
+        0.5833333333333334,
+        2.859375
+      ]
+    },
+    "scr_tau_ratio": {
+      "distribution": "norm",
+      "params": [
+        1.753522264451728,
+        0.2194853003344199
+      ],
+      "bounds": [
+        1.0,
+        2.252487244897959
+      ]
+    },
+    "scr_scl_ratio": {
+      "distribution": "gamma",
+      "params": [
+        2.6201007936873584,
+        0.0,
+        0.01544681662057783
+      ],
+      "bounds": [
+        0.005430514924228191,
+        0.1005912497639656
+      ]
+    }
+  },
+  "scr_beta_var": 0.2,
+  "scl_period_range": [
+    120.0,
+    600.0
+  ],
+  "provenance": {
+    "name": "MAUS_LowMWL",
+    "description": "MAUS dataset, low mental workload (0-back).",
+    "origin": "Frozen reference profile estimated in the author's PhD work and ported to DERMA.",
+    "units": {
+      "scl_drift": "uS/s",
+      "nsscr": "events/min",
+      "scr_amp_sd": "dimensionless",
+      "scr_rise_time": "s",
+      "scr_tau1": "s",
+      "scr_tau_ratio": "dimensionless",
+      "scr_scl_ratio": "dimensionless",
+      "scl_period_range": "s"
+    },
+    "dataset": "MAUS",
+    "citation": "Beh WK, Wu YH, Wu AY. MAUS: A Dataset for Mental Workload Assessment on N-back Task Using Wearable Sensor. arXiv:2111.02561 (2021).",
+    "recipe": {
+      "conditions": [
+        "0back-1",
+        "0back-2"
+      ],
+      "min_segment_sec": 60,
+      "max_segment_sec": 300,
+      "onset_exclusion_sec": 40,
+      "artifact_mask": "manual annotation; the initial ~40 s of each condition, characterized by elevated SCR activity at task onset, were excluded to model the steady-state regime"
+    },
+    "estimation": {
+      "date": "2026-04-09",
+      "sampling_frequency_hz": 4,
+      "decomposition": "cvxEDA (Greco et al., 2016), tau0 = 2.0 s, tau1 = 0.7 s",
+      "cvxeda_hyperparameters": "alpha, gamma and delta_knot were tuned manually for each recording by expert visual inspection, independently of S.O.M.A.; the per-recording values were not preserved.",
+      "segmentation": "contiguous blocks of the target conditions, segments shorter than 60 s discarded, longer segments split into chunks of at most 300 s",
+      "statistical_unit": "segment (several segments per subject)",
+      "distribution_selection": "maximum likelihood fit, family with minimum AIC"
+    }
+  }
+}
