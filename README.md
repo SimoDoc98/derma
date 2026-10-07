@@ -30,7 +30,6 @@ Available in v0.1:
 In development (v0.2):
 
 - Loaders for the CASE, MAUS and SAD datasets (`derma.datasets`)
-- Subject-specific optimization of cvxEDA hyperparameters (S.O.M.A.)
 
 ## Installation
 

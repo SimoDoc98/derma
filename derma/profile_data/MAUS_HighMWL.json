@@ -122,7 +122,7 @@
       "date": "2026-04-09",
       "sampling_frequency_hz": 4,
       "decomposition": "cvxEDA (Greco et al., 2016), tau0 = 2.0 s, tau1 = 0.7 s",
-      "cvxeda_hyperparameters": "alpha, gamma and delta_knot were tuned manually for each recording by expert visual inspection, independently of S.O.M.A.; the per-recording values were not preserved.",
+      "cvxeda_hyperparameters": "alpha, gamma and delta_knot were tuned manually for each recording by expert visual inspection, independently of any automatic hyperparameter optimization; the per-recording values were not preserved.",
       "segmentation": "contiguous blocks of the target conditions, segments shorter than 60 s discarded, longer segments split into chunks of at most 300 s",
       "statistical_unit": "segment (several segments per subject)",
       "distribution_selection": "maximum likelihood fit, family with minimum AIC"

@@ -2,7 +2,14 @@
 
 All notable changes to DERMA are documented in this file.
 
-## [Unreleased]
+## [0.2.0] - Unreleased
+
+### Notes
+- The S.O.M.A. module (subject-specific optimization of decomposition hyperparameters),
+  previously announced for this release, is postponed to a future release (v0.6). The
+  delay allows it to be generalized into an algorithm-agnostic framework, applicable to
+  multiple EDA decomposition methods rather than to cvxEDA only. The empty `derma.soma`
+  placeholder module has been removed.
 
 ### Added
 - `derma.datasets`: loaders for CASE, MAUS and SAD. Each loader checks the SHA-256 of the

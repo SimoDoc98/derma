@@ -10,9 +10,9 @@ of DERMA. It is updated whenever a new kind of use appears and before each relea
 ## Scope of assistance
 
 - **Analysis of the original code**: inventory of the original PhD code to be ported
-  (generator, estimator, S.O.M.A., dataset preprocessing), numerical checks on the
-  original outputs, and a check that the `cvxeda` 1.1.0 package reproduces the original
-  cvxEDA results.
+  (generator, estimator, cvxEDA hyperparameter optimization, dataset preprocessing),
+  numerical checks on the original outputs, and a check that the `cvxeda` 1.1.0 package
+  reproduces the original cvxEDA results.
 - **Project scaffolding**: repository structure, packaging configuration, initial tests
   and CI workflow.
 - **Porting and refactoring of the author's original code**: port of the generator, the
