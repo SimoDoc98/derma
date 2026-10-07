@@ -20,6 +20,9 @@ of DERMA. It is updated whenever a new kind of use appears and before each relea
   goodness-of-fit report from the original PhD code, conversion of the reference
   profiles to JSON, and equivalence tests showing that the ported code reproduces the
   original outputs.
+- **Translation of the author's MATLAB preprocessing to Python**: dataset loaders for
+  CASE, MAUS and SAD reproducing the original MATLAB extraction steps, with local
+  validation against the signals of the original preprocessing.
 - **Documentation**: first drafts of `README.md`, `CONTRIBUTING.md` and `CHANGELOG.md`.
 
 ## Human review

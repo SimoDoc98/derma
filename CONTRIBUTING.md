@@ -18,7 +18,7 @@ the data itself. Please follow these rules when you add or modify a dataset load
    `DERMA_DATA_DIR` environment variable. Never hard-code paths.
 3. **DERMA prepares the data.** Starting from the archive, the loader:
    - verifies its checksum, so that everybody works on the same version of the data;
-   - extracts it;
+   - reads the files it needs directly from the archive, without extracting it;
    - runs the preprocessing;
    - saves the ready-to-use data in the same data folder, so the preprocessing runs only once.
 4. **One module per dataset.** Each dataset has its own module. When a loader

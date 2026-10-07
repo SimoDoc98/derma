@@ -2,6 +2,16 @@
 
 All notable changes to DERMA are documented in this file.
 
+## [Unreleased]
+
+### Added
+- `derma.datasets`: loaders for CASE, MAUS and SAD. Each loader checks the SHA-256 of the
+  original archive, reads it without extracting, resamples the skin conductance to 4 Hz
+  and saves one recording per subject (CASE, SAD) or per condition (MAUS) in
+  `prepared/<DATASET>/<DATASET>_<subject>[_<condition>].npz`, read back by `load()`.
+- Command line: `python -m derma.datasets status` and `python -m derma.datasets prepare`.
+- Dataset page, DOI and license in the metadata of the reference profiles.
+
 ## [0.1.0] - 2026-10-06
 
 First release: core of the generator and of the estimation pipeline, ported from the
