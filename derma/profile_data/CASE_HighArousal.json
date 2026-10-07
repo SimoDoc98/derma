@@ -103,6 +103,9 @@
     },
     "dataset": "CASE",
     "citation": "Sharma K, Castellini C, van den Broek EL, Albu-Schaeffer A, Schwenker F. A dataset of continuous affect annotations and physiological signals for emotion analysis. Scientific Data 6, 196 (2019). doi:10.1038/s41597-019-0209-0",
+    "dataset_page": "https://springernature.figshare.com/articles/dataset/CASE_Dataset-full/8869157",
+    "dataset_doi": "10.6084/m9.figshare.8869157",
+    "license": "CC0 1.0",
     "recipe": {
       "conditions": [
         "amusement-1",

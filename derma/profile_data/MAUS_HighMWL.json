@@ -103,6 +103,9 @@
     },
     "dataset": "MAUS",
     "citation": "Beh WK, Wu YH, Wu AY. MAUS: A Dataset for Mental Workload Assessment on N-back Task Using Wearable Sensor. arXiv:2111.02561 (2021).",
+    "dataset_page": "https://ieee-dataport.org/open-access/maus-dataset-mental-workload-assessment-n-back-task-using-wearable-sensor",
+    "dataset_doi": "10.21227/q4td-yd35",
+    "license": "CC BY 4.0",
     "recipe": {
       "conditions": [
         "2back-1",

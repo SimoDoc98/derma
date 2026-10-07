@@ -106,6 +106,9 @@
     },
     "dataset": "SAD",
     "citation": "Healey JA, Picard RW. Detecting stress during real-world driving tasks using physiological sensors. IEEE Transactions on Intelligent Transportation Systems 6(2), 156-166 (2005). doi:10.1109/TITS.2005.848368. Distributed by PhysioNet (drivedb): Goldberger AL et al., Circulation 101(23), e215-e220 (2000).",
+    "dataset_page": "https://physionet.org/content/drivedb/1.0.0/",
+    "dataset_doi": "10.13026/C2SG6B",
+    "license": "Open Data Commons Attribution License v1.0",
     "recipe": {
       "conditions": "all samples",
       "min_segment_sec": 60,
