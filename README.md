@@ -28,7 +28,7 @@ Available in v0.1:
   (`derma.decomposition`)
 - Goodness-of-fit report for fitted profiles (`derma.report`)
 
-In development (v0.2):
+Available in v0.2:
 
 - Loaders for the CASE, MAUS and SAD datasets (`derma.datasets`)
 

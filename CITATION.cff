@@ -6,7 +6,8 @@ authors:
   - family-names: Costantini
     given-names: Simone
     orcid: "https://orcid.org/0009-0001-5104-6733"
-version: 0.1.0
+version: 0.2.0
+date-released: "2026-10-07"
 license: MIT
 repository-code: "https://github.com/SimoDoc98/derma"
 keywords:

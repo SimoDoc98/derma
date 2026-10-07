@@ -2,7 +2,7 @@
 
 All notable changes to DERMA are documented in this file.
 
-## [0.2.0] - Unreleased
+## [0.2.0] - 2026-10-07
 
 ### Notes
 - The S.O.M.A. module (subject-specific optimization of decomposition hyperparameters),
