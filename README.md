@@ -10,7 +10,8 @@ electrodermal activity (EDA) calibrated on real recordings.
 DERMA estimates interpretable tonic and phasic parameters from real EDA recordings,
 summarizes them as population profiles (maximum-likelihood fits with AIC model
 selection), and generates synthetic signals with known ground truth: tonic and phasic
-components, sudomotor driver and the coefficients of the SCR kernel.
+components, sudomotor driver and the coefficients of the SCR kernel. The model is
+described in [docs/theory.md](docs/theory.md).
 
 > **Status: early development.** The first releases port and generalize code developed
 > during the author's PhD; the API is not stable yet.

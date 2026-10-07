@@ -18,6 +18,7 @@ All notable changes to DERMA are documented in this file.
   `prepared/<DATASET>/<DATASET>_<subject>[_<condition>].npz`, read back by `load()`.
 - Command line: `python -m derma.datasets status` and `python -m derma.datasets prepare`.
 - Dataset page, DOI and license in the metadata of the reference profiles.
+- `docs/theory.md`: generative model, parameters, estimation and goodness-of-fit checks.
 
 ## [0.1.0] - 2026-10-06
 
