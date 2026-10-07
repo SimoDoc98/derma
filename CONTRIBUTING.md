@@ -21,14 +21,8 @@ the data itself. Please follow these rules when you add or modify a dataset load
    - reads the files it needs directly from the archive, without extracting it;
    - runs the preprocessing;
    - saves the ready-to-use data in the same data folder, so the preprocessing runs only once.
-4. **One module per dataset.** Each dataset has its own module. When a loader
-   reproduces an existing preprocessing pipeline (for example the original MATLAB
-   scripts used to build DERMA's reference profiles), it must replicate the same steps
-   in the same order: resampling, filtering, segmentation, condition labels.
-5. **Document every difference.** If a step cannot be reproduced exactly (e.g. a
-   resampling filter that differs between MATLAB and SciPy), describe the difference and
-   its expected numerical impact in the module docstring.
-6. **Never commit data.** Raw or derived data (`.mat`, `.npz`, `.csv`, extracted
+4. **One module per dataset.** Each dataset has its own module.
+5. **Never commit data.** Raw or derived data (`.mat`, `.npz`, `.csv`, extracted
    archives, preprocessed files) must never enter the repository. Also check that
    nothing derived from a dataset ends up in test fixtures.
 
